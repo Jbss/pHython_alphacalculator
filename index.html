@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang='ko'>
+    <head>
+        <title>이온화도</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+        <style>
+            *{
+                font-family: 'Do Hyeon', sans-serif;
+            }
+            form{
+                margin:0px;
+            }
+            h1{
+                text-align: center;
+                top:50%;
+                left:50%;
+            }
+            .wrapper{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+            }
+            .content{
+                font-size: 2rem;
+                padding:2rem;
+                border-radius: 1rem;
+                background: #98ccb7;
+                text-align: center;
+            }
+            body{
+                background-image: url('board-g33840c1a6_1920.png');
+                background-size:cover;
+            }
+            input[type=number]{
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                border-bottom: 3px white solid;
+                background-color: transparent;
+                text-align:center;
+                color: rgb(83, 83, 83);
+            }
+            input[type=number]:focus{
+                outline: none;
+                color: rgb(61, 61, 61);
+            }
+            input[type=number]::placeholder{
+                color:rgb(65, 65, 65);
+                font-size: 15px;
+                text-align: center;
+            }
+            input[type=number]::-webkit-input-placeholder
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="content">
+                <form oninput="result.value=Math.sqrt(parseFloat(b.value)/parseFloat(a.value))">
+                몰농도(M) : <input type="number" id="a" step="0.01" style="width:300px;font-size:30px">
+                산(염기)해리상수 : <input type="number" id="b" step="0.01" style="width:300px;font-size:30px"><br>
+                이온화도 = <output name="result" for="a b"></output>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
